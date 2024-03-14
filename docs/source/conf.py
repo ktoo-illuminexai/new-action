@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "new action"
-copyright = "2024, illuminex AI"
-author = "illuminex AI"
+project = "New Action"
+copyright = "2024, Illuminex AI"
+author = "Illuminex AI"
 
 # The full version, including alpha/beta/rc tags
 release = "0.1"

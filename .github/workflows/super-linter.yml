@@ -35,3 +35,4 @@ jobs:
           OUTPUT_FOLDER: Reports
           OUPUT_DETAILS: detailed
           VALIDATE_ALL_CODEBASE: false
+          FILTER_REGEX_EXCLUDE: docs

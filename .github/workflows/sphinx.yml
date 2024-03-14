@@ -1,10 +1,11 @@
+---
 name: Sphinx Build on push and pull request
 on:
   push:
     branches: [lint-branch]
   pull_request:
     branches: [master]
-permissions: write-all
+permissions: read-all
 jobs:
   docs:
     runs-on: ubuntu-latest
