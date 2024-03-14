@@ -1,0 +1,4 @@
+sphinx_rtd_theme
+sphinx
+sphinx-js
+markupsafe==2.0.1
