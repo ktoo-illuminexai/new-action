@@ -7,6 +7,13 @@ on:
     branches: [master]
 permissions: read-all
 jobs:
+  node:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "14"
+      - run: npm install -g jsdoc
   docs:
     runs-on: ubuntu-latest
     steps:
@@ -15,3 +22,4 @@ jobs:
       - uses: ammaraskar/sphinx-action@master
         with:
           docs-folder: "docs/"
+      - run: make html
