@@ -25,9 +25,6 @@ jobs:
       - name: Install requirements.txt
         run: pip install -r ./docs/requirements.txt
 
-      - name: Copy conf file
-        run: cp ./docs/source/conf.py /home/runner/work/new-action/new-action/docs/source/conf.py
-
       - name: Run Sphinx
         run: sphinx-build -b html docs/ docs/_build/html
 
