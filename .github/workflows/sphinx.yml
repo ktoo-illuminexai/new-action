@@ -1,0 +1,15 @@
+name: Sphinx Build on push and pull request
+on:
+  push:
+    branches: [lint-branch]
+  pull_request:
+    branches: [master]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: "docs/"
