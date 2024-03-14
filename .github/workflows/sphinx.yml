@@ -25,3 +25,5 @@ jobs:
         uses: ammaraskar/sphinx-action@master
         with:
           docs-folder: "docs/"
+        env:
+          INPUT_DOCS-FOLDER: "docs/"
