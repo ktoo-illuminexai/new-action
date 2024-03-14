@@ -3,6 +3,19 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
+/**
+ * @returns {JSX.Element}
+ * @constructor
+ * @description
+ * This is the main component of the application.
+ * It is a simple counter that increments the count when the button is clicked.
+ * It also displays the Vite and React logos.
+ * The logos are clickable and will open the respective documentation pages.
+ * The component is styled using the App.css file.
+ * The component is exported as the default export.
+ * The component is imported in the index.jsx file.
+ * The component is rendered in the index.jsx file.
+ */
 function App() {
   const [count, setCount] = useState(0);
 
@@ -16,7 +29,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React + new</h1>
+      <h1>Vite + React + new branch</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

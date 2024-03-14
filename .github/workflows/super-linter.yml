@@ -2,7 +2,10 @@
 name: Lint
 
 on: # yamllint disable-line rule:truthy
-  [push]
+  push:
+    branches: [lint-branch]
+  pull_request:
+    branches: [lint-branch]
 permissions: read-all
 jobs:
   build:
@@ -32,3 +35,4 @@ jobs:
           OUTPUT_FOLDER: Reports
           OUPUT_DETAILS: detailed
           VALIDATE_ALL_CODEBASE: false
+          FILTER_REGEX_EXCLUDE: docs

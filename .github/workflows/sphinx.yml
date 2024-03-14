@@ -1,0 +1,38 @@
+---
+name: Sphinx Build on push and pull request
+on:
+  push:
+    branches: [lint-branch]
+  pull_request:
+    branches: [master]
+permissions: read-all
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install jsdoc
+        run: npm install -g jsdoc
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install requirements.txt
+        run: pip install -r ./docs/requirements.txt
+
+      - name: Run Sphinx
+        run: sphinx-build -b html docs/source docs/_build/html
+
+    #   - name: Run Sphinx
+    #     uses: ammaraskar/sphinx-action@master
+    #     with:
+    #       docs-folder: "docs/"
+    #     env:
+    #       INPUT_DOCS-FOLDER: "docs/"
