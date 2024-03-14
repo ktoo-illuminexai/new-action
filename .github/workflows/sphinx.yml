@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+      - name: Install jsdoc
+        run: npm install -g jsdoc
 
       - name: Setup Python
         uses: actions/setup-python@v5
